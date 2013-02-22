@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+ 
+<hibernate-mapping package="com.sample.risk.dao">
+ 
+    <class name="RiskData" table="risk_data">
+        <id name="id" column="ID" type="java.lang.Integer">
+        	<generator class="native"/>
+        </id>
+        <property name="point" column="point" />
+      <!--   <property name="factor" column="factor" /> -->
+        <property name="type" column="type"/>
+        <property name="date" type="date" column="date"/>
+        <property name="description" column="description"/>
+    </class>
+    
+    <class name="RiskCategoryBO" table="risk_metadata">
+        <id name="id" column="ID">
+        	<generator class="native"/>
+        </id>
+        <property name="category" column="risk_type" />
+    </class>
+    
+ 
+</hibernate-mapping>

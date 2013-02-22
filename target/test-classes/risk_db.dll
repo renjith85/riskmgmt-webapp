@@ -1,0 +1,4 @@
+drop table risk_metadata;
+drop table risk_data;
+create table risk_metadata(id INT NOT NULL UNIQUE AUTO_INCREMENT PRIMARY KEY,risk_type varchar(10) NOT NULL UNIQUE);
+create table risk_data(id INT NOT NULL UNIQUE AUTO_INCREMENT PRIMARY KEY,date DATE NOT NULL,description VARCHAR(50) NOT NULL, type VARCHAR(10) NOT NULL, point DECIMAL(3,0) NOT NULL);
